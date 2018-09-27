@@ -9,7 +9,7 @@
 7. 登录GitHub，创建与本地git同名的仓库  --->进行两个仓库远程同步
 8. `$ git remote add origin git@github.com:increasinglyy/PAT.git`关联仓库
 9. `$ git push -u origin master` 本地库的所有内容推到远程库（第一次推加 -u）以后是 `$ git push origin master`
-10. `$ git clone git@github.com:increasinglyy/PAT.git` 从远程库克隆
+10. `$ git clone git@github.com:increasinglyy/PAT.git` 从远程库克隆（直接cd 到需要克隆的文件夹下）
 
 
 
