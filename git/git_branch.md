@@ -18,7 +18,7 @@
 
 1、master指向提交，HEAD指向当前分支（master）。
 
-![git-br-initial](https://cdn.liaoxuefeng.com/cdn/files/attachments/0013849087937492135fbf4bbd24dfcbc18349a8a59d36d000/0)
+![](F:\xiedanhongGit\notes\images\0.png)
 
 2、当创建新的分支dev，新建指针dev 指向master相同的提交，再把HEAD指向dev（当前分支）。
 
@@ -35,13 +35,13 @@ $ git checkout dev
 Switched to branch 'dev'
 ```
 
-![git-br-create](https://cdn.liaoxuefeng.com/cdn/files/attachments/001384908811773187a597e2d844eefb11f5cf5d56135ca000/0)
+![](F:\xiedanhongGit\notes\images\1.png)
 
 
 
 3、之后commit提交就是针对dev分支。
 
-![git-br-dev-fd](https://cdn.liaoxuefeng.com/cdn/files/attachments/0013849088235627813efe7649b4f008900e5365bb72323000/0)
+![](F:\xiedanhongGit\notes\images\2.png)
 
 4、`dev`分支的工作完成，切换回`master`分支：（HEAD指向当前分支）
 
@@ -50,7 +50,7 @@ $ git checkout master
 Switched to branch 'master'
 ```
 
-![git-br-on-master](https://cdn.liaoxuefeng.com/cdn/files/attachments/001384908892295909f96758654469cad60dc50edfa9abd000/0)
+![](F:\xiedanhongGit\notes\images\3.png)
 
 
 
@@ -60,7 +60,7 @@ Switched to branch 'master'
 $ git merge dev
 ```
 
-![git-br-ff-merge](https://cdn.liaoxuefeng.com/cdn/files/attachments/00138490883510324231a837e5d4aee844d3e4692ba50f5000/0)
+![](F:\xiedanhongGit\notes\images\4.png)
 
 6、删除分支
 
