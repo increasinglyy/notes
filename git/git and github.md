@@ -16,5 +16,12 @@
 ## others
 
 1. `$ git status` 查看状态
+
 2. `$ git diff` 查看不同
+
 3. `$ git log` 查看提交历史
+
+4. `$ git rm test.txt` 从版本库中删除文件（status提示已经在文件管理器中删除，且确实要从版本库中删除）
+
+   `$ git checkout -- test.txt` 删错了，从版本库中恢复
+
