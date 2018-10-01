@@ -18,7 +18,7 @@
 
 1、master指向提交，HEAD指向当前分支（master）。
 
-![](F:\xiedanhongGit\notes\images\0.png)
+![](https://github.com/increasinglyy/notes/raw/master/images/0.png)
 
 2、当创建新的分支dev，新建指针dev 指向master相同的提交，再把HEAD指向dev（当前分支）。
 
