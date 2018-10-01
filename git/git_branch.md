@@ -18,7 +18,7 @@
 
 1、master指向提交，HEAD指向当前分支（master）。
 
-![](F:\xiedanhongGit\notes\images\0.png)
+![](https://github.com/increasinglyy/notes/raw/master/images/0.png)
 
 2、当创建新的分支dev，新建指针dev 指向master相同的提交，再把HEAD指向dev（当前分支）。
 
@@ -35,13 +35,13 @@ $ git checkout dev
 Switched to branch 'dev'
 ```
 
-![](F:\xiedanhongGit\notes\images\1.png)
+![](https://github.com/increasinglyy/notes/raw/master/images/1.png)
 
 
 
 3、之后commit提交就是针对dev分支。
 
-![](F:\xiedanhongGit\notes\images\2.png)
+![](https://github.com/increasinglyy/notes/raw/master/images/2.png)
 
 4、`dev`分支的工作完成，切换回`master`分支：（HEAD指向当前分支）
 
@@ -50,7 +50,7 @@ $ git checkout master
 Switched to branch 'master'
 ```
 
-![](F:\xiedanhongGit\notes\images\3.png)
+![](https://github.com/increasinglyy/notes/raw/master/images/3.png)
 
 
 
@@ -60,7 +60,7 @@ Switched to branch 'master'
 $ git merge dev
 ```
 
-![](F:\xiedanhongGit\notes\images\4.png)
+![](https://github.com/increasinglyy/notes/raw/master/images/4.png)
 
 6、删除分支
 
