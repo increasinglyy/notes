@@ -82,6 +82,12 @@ GID是当前有效分组
 
 
 
+`ls -al  --->`  `drwxr-xr--   1 test1    testgroup    5238 Jun 19 10:25 groups/`
+
+d表示目录，-表示文件
+
+other的权限中[r--]虽然有r ，但是由于没有x的权限，因此others的使用者，并不能进入此目录！
+
 
 
 
@@ -96,11 +102,13 @@ GID是当前有效分组
 
 `echo $PATH` 
 
-![](F:\xiedanhong\images\TIM图片20180917161711.png)
+![](images/TIM图片20180917161711.png)
 
-![](F:\xiedanhong\images\TIM图片20180917170656.png)
+![](images/TIM图片20180917170656.png)
 
 `cd ..` 进入上一级目录
+
+`cd` 进入该用户home目录
 
 
 
@@ -124,7 +132,11 @@ GID是当前有效分组
 
 ## 问题：
 
-1、把user2创建的文件222.txt的群组和所属者g改成了xiedanhong/root，xiedanhong 为什么还是无法删除，提示权限不够
+1、把user2创建的文件222.txt的群组和所属者g改成了xiedanhong/root（文件在user2的home目录下），xiedanhong 为什么还是无法删除，提示权限不够，user2自己可以删除
+
+![权限不够](images/linux1.jpg)
+
+![权限不够](images/linux2.jpg)
 
 xiedanhong没有权限在/home下写文件和删文件
 
