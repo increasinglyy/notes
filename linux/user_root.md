@@ -66,22 +66,6 @@ GID是当前有效分组
 
 ## 改变文件属性与权限
 
-`chgrp [-R] groupname dirname/filename`  改变所属群组
-
-`chown [-R] username[:groupname] dirname/filename`
-
- 改变文件所属者（与群组）
-
-`cp 来源文件 目标文件`  要记得改变文件的群组和拥有者
-
-
-
-`chmod [-R] xxx dirname/filename`  改变文件权限，xxx：664/775...
-
-`chmod u=rwx,g=rx,o=r filename` 
-
-
-
 `ls -al  --->`  `drwxr-xr--   1 test1    testgroup    5238 Jun 19 10:25 groups/`
 
 d表示目录，-表示文件
@@ -90,7 +74,50 @@ other的权限中[r--]虽然有r ，但是由于没有x的权限，因此others�
 
 
 
+`chgrp [-R] groupname dirname/filename`  改变所属群组
 
+`chown [-R] username[:groupname] dirname/filename`
+
+ 改变文件所属者（与群组）
+
+`cp 来源文件 目标文件`  要记得改变文件的群组和拥有者，复制行为(cp)会复制执行者的属性与权限
+
+
+
+`chmod [-R] xxx dirname/filename`  改变文件权限，xxx：664/775...
+
+`chmod u=rwx,g=rx,o=r filename` 
+
+`chmod  a-x  .bashrc`  去掉所有人的可执行权限
+
+
+
+##### 权限对于目录
+
+r 表示具有读取目录结构列表的权限，可以查询该目录下的文件名数据。可以利用 ls 这个指令将该目录的内容列表显示出来！
+
+w 
+
+- 建立新的文件与目录；
+- 删除已经存在的文件与目录(不论该文件的权限为何！)
+- 将已存在的文件或目录进行更名；
+- 搬移该目录内的文件、目录位置。
+
+x 用户能否进入该目录成为工作目录。能不能进入某一个目录，只与该目录的x权限有关
+
+
+
+# 文件种类
+
+##### 数据输送文件(FIFO, pipe)：
+
+FIFO也是一种特殊的文件类型，他主要的目的在解决多个程序同时存取一个文件所造成的错误问题。
+FIFO是first-in-first-out的缩写。第一个属性为[p] 。
+
+##### 数据接口文件(sockets)：
+
+既然被称为数据接口文件，这种类型的文件通常被用在网络上的数据承接了。我们可以启动一个程序来监听客户端的要求，而客户端就可以透过这个socket来进行数据的沟通了。第一个属性为 [ s ]，
+最常在/var/run这个目录中看到这种文件类型了。
 
 ## other命令
 
@@ -118,6 +145,12 @@ other的权限中[r--]虽然有r ，但是由于没有x的权限，因此others�
 
 `echo “xxx" >> filename` 向文件filename追加写入xxx
 
+`touch filename`  创建空文件
+
+`mkdir dirname`  创建目录
+
+`rm -rf dirname`  删除目录
+
 
 
 ##### 修改语言
@@ -139,6 +172,20 @@ other的权限中[r--]虽然有r ，但是由于没有x的权限，因此others�
 ![权限不够](images/linux2.jpg)
 
 xiedanhong没有权限在/home下写文件和删文件
+
+
+
+解释：
+
+![](images/linux3.png)
+
+在/home目录下，每个用户只对自己的目录有w权限，只有w权限才有删除已经存在的文件与目录(不论该文件的权限为何！)
+
+没有x权限不能切换到该目录（rootfile）
+
+![](images/linux4.png)
+
+将目录所属者改成xiedanhong，即rwx(w)就有权限删除目录了（目录下所有文件所属者都要改）
 
 
 
